@@ -2,9 +2,13 @@
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-14 right-0 h-16 bg-bg-card border-b border-border-clr flex items-center justify-between px-6 z-50 shadow-sm">
-      {/* Left - Just a placeholder to help center the search bar */}
-      <div className="flex-1"></div>
+    <nav className="fixed top-0 left-14 max-sm:left-0 right-0 h-16 bg-bg-card border-b border-border-clr flex items-center justify-between px-6 max-sm:px-4 z-50 shadow-sm">
+      {/* Left - Logo (Visible only on mobile) */}
+      <div className="flex-1 flex items-center">
+        <div className="hidden max-sm:flex items-center gap-2">
+          <img src="/logo.png" alt="Logo" className="w-8 h-8 object-contain" />
+        </div>
+      </div>
 
       {/* Center - Search */}
       <div className="flex-2 flex justify-center">
@@ -19,18 +23,24 @@ export default function Navbar() {
             className="w-full h-10 pl-10 pr-4 bg-bg-main border border-border-clr rounded-full text-sm text-text-primary outline-none transition-all focus:border-primary focus:shadow-[0_0_0_3px_rgba(108,92,231,0.1)] placeholder:text-text-muted"
           />
         </div>
+        {/* Mobile Search Icon */}
+        <button className="hidden max-md:flex max-sm:hidden w-10 h-10 rounded-full items-center justify-center bg-bg-main border border-border-clr text-text-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
       </div>
 
       {/* Right */}
-      <div className="flex-1 flex items-center justify-end gap-2">
-        <button className="relative w-10 h-10 rounded-full flex items-center justify-center bg-bg-main border border-border-clr cursor-pointer text-text-secondary transition-all hover:bg-primary-bg hover:text-primary hover:border-primary-light" title="Messages">
+      <div className="flex-1 flex items-center justify-end gap-2 max-sm:gap-0.5">
+        <button className="relative w-9 h-9 rounded-full flex items-center justify-center bg-transparent cursor-pointer text-text-secondary transition-all hover:bg-primary-bg hover:text-primary" title="Messages">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
           </svg>
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-danger rounded-full border-2 border-bg-card"></span>
         </button>
 
-        <button className="relative w-10 h-10 rounded-full flex items-center justify-center bg-bg-main border border-border-clr cursor-pointer text-text-secondary transition-all hover:bg-primary-bg hover:text-primary hover:border-primary-light" title="Notifications">
+        <button className="relative w-9 h-9 rounded-full flex items-center justify-center bg-transparent cursor-pointer text-text-secondary transition-all hover:bg-primary-bg hover:text-primary" title="Notifications">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9" />
             <path d="M13.73 21a2 2 0 01-3.46 0" />
@@ -38,7 +48,7 @@ export default function Navbar() {
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-danger rounded-full border-2 border-bg-card"></span>
         </button>
 
-        <img src="/img4.png" alt="Profile" className="w-9 h-9 rounded-full object-cover cursor-pointer border-2 border-border-clr ml-1 transition-colors hover:border-primary" />
+        <img src="/img4.png" alt="Profile" className="w-8 h-8 rounded-full object-cover cursor-pointer border-2 border-transparent hover:border-primary ml-1 max-sm:ml-0.5" />
 
         <button className="bg-transparent border-none cursor-pointer text-text-muted flex items-center p-1" title="Menu">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
