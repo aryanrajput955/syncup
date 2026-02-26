@@ -28,7 +28,7 @@ export default function Home() {
             <PostCard
               id="1"
               userName="Pan Feng Shui"
-              userAvatar="/img3.jpg"
+              userAvatar="/img6.png"
               timestamp="12 April at 09:28 PM"
               content={
                 <>

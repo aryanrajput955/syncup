@@ -4,8 +4,8 @@ SyncUp is a high-fidelity, pixel-perfect professional social network application
 
 ## 🚀 Live Demo
 
-- **Live Deployment:** [View the Application](https://your-vercel-link.vercel.app)
-- **GitHub Repository:** [SyncUp Repository](https://github.com/your-username/syncup)
+- **Live Deployment:** [View the Application](https://syncup-woad.vercel.app/)
+- **GitHub Repository:** [SyncUp Repository](https://github.com/aryanrajput955/syncup)
 
 ---
 
@@ -108,4 +108,4 @@ public/                 # Static assets (logos, profile images)
 
 ---
 
-Built with ❤️ by [Your Name]
+Built with ❤️ by [Aryan Rajput]
